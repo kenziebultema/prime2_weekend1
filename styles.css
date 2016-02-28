@@ -1,0 +1,46 @@
+body {
+    background-color: tomato;
+    color: #6B1100;
+}
+.monthlyCost {
+    text-align: center;
+    text-decoration: underline;
+    font: bold 24px/26px serif;
+    margin-bottom: 5px;
+}
+.employeeForm {
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #BB2509;
+}
+input {
+    display: block;
+    background-color: #F03B1A;
+    height: 22px;
+    margin: 0 auto 5px;
+    border: 2px solid #BB2509;
+    font-size: 16px;
+}
+input[type="submit"] {
+    height: 34px;
+    color: #6B1100;
+}
+.container {
+    text-align: center;
+}
+.employee {
+    background-color: #F03B1A;
+    display: inline-block;
+    border: 2px solid #BB2509;
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+}
+p {
+    text-indent: 15px;
+}
+.title {
+    text-decoration: underline;
+    text-align: left;
+    text-indent: 0px;
+}
