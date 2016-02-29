@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 //find monthly salary and add up cost
 function findMonthly(salary){
-    monthlyCost += Math.round(salary / 12);
+    monthlyCost += Math.round((salary / 12) * 100) / 100;
     console.log(monthlyCost);
 }
 

@@ -1,6 +1,7 @@
 body {
     background-color: tomato;
     color: #6B1100;
+    font-family: sans-serif;
 }
 .monthlyCost {
     text-align: center;
