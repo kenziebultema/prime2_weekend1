@@ -1,8 +1,7 @@
 //STATUS:
 //normal mode completed
 //hard mode completed
-//pro mode in progress
-    //sort of completed, under certain conditions
+//pro mode completed!!
 
 var employeeArray = [];
 var monthlyCost = 0;
@@ -27,8 +26,10 @@ $(document).ready(function(){
         appendDom(values);
         // appendMonthly(monthlyCost);
 
-        $('.employee').on('click', '.delete', removeEmployee);
     });
+
+    $('.container').on('click', '.delete', removeEmployee);
+
 });
 
 //find monthly salary and add up cost
