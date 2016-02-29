@@ -45,3 +45,11 @@ p {
     text-align: left;
     text-indent: 0px;
 }
+.delete {
+    height: 34px;
+    background-color: #F03B1A;
+    color: #6B1100;
+    border: 2px solid #BB2509;
+    font-size: 16px;
+
+}

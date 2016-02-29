@@ -19,6 +19,8 @@ $(document).ready(function(){
         findMonthly(values.employeeYearSalary);
         appendDom(values);
         appendMonthly(monthlyCost);
+
+        $('.employee').on('click', 'button', removeEmployee);
     });
 });
 
@@ -26,6 +28,12 @@ $(document).ready(function(){
 function findMonthly(salary){
     monthlyCost += Math.round((salary / 12) * 100) / 100;
     console.log(monthlyCost);
+}
+
+//remove employee from dom
+function removeEmployee(){
+    console.log('working');
+    $(this).parent().remove();
 }
 
 //append to DOM(monthly cost)
@@ -44,6 +52,8 @@ function appendDom(object){
 	$el.append("<p class='title'>Employee ID </p><p>" + object.employeeID + "</p>");
 	$el.append("<p class='title'>Employee Title </p><p>" + object.employeeTitle + "</p>");
 	$el.append("<p class='title'>Employee Salary</p><p>$" + object.employeeYearSalary + "</p>");
+
+    $el.append('<button class="delete">Delete Employee</button');
 }
 
 console.log('connected');
