@@ -40,24 +40,28 @@ function findMonthly(salary){
 }
 
 //remove employee from dom
-function removeEmployee(){
+function removeEmployee(event){
     console.log('working');
-    removeSal($(this).parent().data().key);
+    // removeSal($(this).parent().data().key);
+    var monthlySalary = $(this).data('key');
+    console.log("HERE:" , monthlySalary);
+    monthlyCost -= monthlySalary;
+    appendMonthly(monthlyCost);
     $(this).parent().remove();
 }
 
 //finds specific employee, removes them, recalculates monthly cost
-function removeSal(key){
-    monthlyCost = 0;
-    for(var i = 0; i < employeeArray.length; i++){
-        if(key === employeeArray[i].key){
-            console.log(employeeArray);
-            employeeArray.splice(i, 1);
-            console.log(employeeArray);
-            findMonthly(employeeArray[i].employeeYearSalary);
-        }
-    }
-}
+// function removeSal(key){
+//     monthlyCost = 0;
+    // for(var i = 0; i < employeeArray.length; i++){
+//         if(key === employeeArray[i].key){
+//             console.log(employeeArray);
+//             employeeArray.splice(i, 1);
+//             console.log(employeeArray);
+//             findMonthly(employeeArray[i].employeeYearSalary);
+//         }
+//     }
+// }
 
 //append to DOM(monthly cost)
 function appendMonthly(monthlyCost){
@@ -73,15 +77,18 @@ function appendDom(object){
     $('.container').append('<div class="employee"></div>');
     var $el = $('.container').children().last();
 
-    //assign key value to person
-    $el.data('key', object.key);
-
 	$el.append("<p class='title'>Employee Name </p><p>" + object.employeeFirstName + " " + object.employeeLastName + "</p>");
 	$el.append("<p class='title'>Employee ID </p><p>" + object.employeeID + "</p>");
 	$el.append("<p class='title'>Employee Title </p><p>" + object.employeeTitle + "</p>");
 	$el.append("<p class='title'>Employee Salary</p><p>$" + object.employeeYearSalary + "</p>");
 
     $el.append('<button class="delete">Delete Employee</button>');
+
+    //var $deleteButton = $el.find('button');
+    var $deleteButton = $el.children().last();
+    var calcMonthly = parseInt(Math.round(object.employeeYearSalary / 12))
+    $deleteButton.data('key', calcMonthly);
+
 }
 
 console.log('connected');
