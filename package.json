@@ -1,0 +1,25 @@
+{
+  "name": "prime2_weekend1",
+  "version": "1.0.0",
+  "description": "\"make it MEAN\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenziebultema/prime2_weekend1.git"
+  },
+  "author": "\"Kenzie Bultema\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenziebultema/prime2_weekend1/issues"
+  },
+  "homepage": "https://github.com/kenziebultema/prime2_weekend1#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "pg": "^4.5.1"
+  }
+}
